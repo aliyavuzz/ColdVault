@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "description": "ColdVault dependency kill list. Add entries to nuke reproducible artifacts before archiving.",
+  "rules": [
+    {
+      "language": "javascript",
+      "markers": ["package.json", "yarn.lock", "package-lock.json"],
+      "kill": ["node_modules", ".expo", "dist", "build", ".next", ".nuxt", ".cache"]
+    },
+    {
+      "language": "python",
+      "markers": ["requirements.txt", "setup.py", "pyproject.toml", "Pipfile"],
+      "kill": [".venv", "venv", "env", "__pycache__", ".pytest_cache", ".mypy_cache", ".tox", "*.egg-info"]
+    },
+    {
+      "language": "go",
+      "markers": ["go.mod", "go.sum"],
+      "kill": ["vendor"]
+    },
+    {
+      "language": "rust",
+      "markers": ["Cargo.toml", "Cargo.lock"],
+      "kill": ["target"]
+    },
+    {
+      "language": "c_cpp",
+      "markers": ["CMakeLists.txt", "Makefile", "*.sln", "*.vcxproj"],
+      "kill": [".vs", "x64", "x86", "Debug", "Release", "out", "build"]
+    },
+    {
+      "language": "dotnet",
+      "markers": ["*.csproj", "*.fsproj"],
+      "kill": ["bin", "obj", "packages"]
+    },
+    {
+      "language": "java",
+      "markers": ["pom.xml", "build.gradle"],
+      "kill": ["target", "build", ".gradle"]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "scan_dirs": ["C:\\Users\\alioz\\claude proje"],
+  "cloud_dest": "C:\\Users\\alioz\\Yandex.Disk\\ColdStorage",
+  "inactivity_days": 30,
+  "redlist": [],
+  "schedule_hour": 11,
+  "schedule_minute": 0,
+  "log_file": "",
+  "dry_run": false
+}
